@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "llama.cpp",
+			"path": "llama.cpp"
+		},
+		{
+			"name": "llama",
+			"path": "llama"
+		}
+	],
+	"settings": {}
+}
