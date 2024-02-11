@@ -1,3 +1,4 @@
 langchain==0.1.6
 streamlit==1.24.0
-langchain-core 0.1.22
+langchain-core==0.1.22
+langchain_core==0.1.16
