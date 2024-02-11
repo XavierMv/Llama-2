@@ -1,5 +1,6 @@
 langchain
 streamlit
 langchain-core
+langchain_core
 langchain-core.messages
 langchain_core.messages
