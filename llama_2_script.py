@@ -2,7 +2,15 @@ import streamlit as st
 
 def gpt_chat():
     st.title("Chat with Llama")
+    
+    user_txt = st.chat_input("Type your message")
+    if user_txt is not None and user_txt != "":
 
+        with st.chat_message("Human"):
+            st.write(user_txt)
+
+        with st.chat_message("AI"):
+            st.write("Message from AI")
 
 def gpt_chat_spanish():
     st.title("We will be using Llama... para hablar en español!")
