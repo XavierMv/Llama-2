@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain_core.messages import AIMessage, HumanMessage
+import langchain as lch
 
 def gpt_chat():
     st.title("Chat with Llama")
@@ -7,17 +7,17 @@ def gpt_chat():
     def get_answer(user_input):
         return "I don't know"
     
-    chat_history = [AIMessage("Hello! How can I help you?"),]    
+    chat_history = [lch.messages.AIMessage("Hello! How can I help you?"),]    
     user_txt = st.chat_input("Type your message")
     if user_txt is not None and user_txt != "":
         answer = get_answer(user_txt)
-        chat_history.append(HumanMessage(content = user_txt))
-        chat_history.append(AIMessage(content = answer))
+        chat_history.append(lch.messages.HumanMessage(content = user_txt))
+        chat_history.append(lch.messages.AIMessage(content = answer))
 
         with st.chat_message("Human"):
             st.write(user_txt)
         with st.chat_message("AI"):
-            st.write(response)
+            st.write(answer)
 
 
 
