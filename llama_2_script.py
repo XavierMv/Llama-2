@@ -1,5 +1,5 @@
 import streamlit as st
-import langchain as lch
+import langchain_core as lch
 
 def gpt_chat():
     st.title("Chat with Llama")
