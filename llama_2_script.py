@@ -11,8 +11,8 @@ def gpt_chat():
     user_txt = st.chat_input("Type your message")
     if user_txt is not None and user_txt != "":
         answer = get_answer(user_txt)
-        chat_history.append(lch.messages.HumanMessage(content = user_txt))
-        chat_history.append(lch.messages.AIMessage(content = answer))
+        chat_history.append(lch.messages.human.HumanMessage(content = user_txt))
+        chat_history.append(lch.messages.ai.AIMessage(content = answer))
 
         with st.chat_message("Human"):
             st.write(user_txt)
